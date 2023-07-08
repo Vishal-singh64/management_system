@@ -1,5 +1,6 @@
 import {BiSearchAlt} from 'react-icons/Bi'
 import { MdDelete } from 'react-icons/md'
+import {CiFloppyDisk} from 'react-icons/ci'
 import EditStudent from './editStudent'
 import {  useEffect, useState } from 'react'
 import { toast } from 'react-hot-toast'
@@ -72,8 +73,13 @@ return formattedDate;
       <div>
       {
         data.length===0 ? (
+          <div className="flex flex-col justify-center items-center m-10">
 
-          <p>data not found</p>
+          <CiFloppyDisk size={78} color='grey'/>
+          
+          <h3 className="mt-5 text-slate-500">No Record Found!</h3>
+          
+          </div>
         ) : (
 
         <table className="min-w-full text-center text-sm font-semibold">
